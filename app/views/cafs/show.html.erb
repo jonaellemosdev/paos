@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @caf.usuario %>
+</p>
+
+<p>
+  <strong>Senha:</strong>
+  <%= @caf.senha %>
+</p>
+
+<%= link_to 'Edit', edit_caf_path(@caf) %> |
+<%= link_to 'Back', cafs_path %>

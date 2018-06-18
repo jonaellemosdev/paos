@@ -1,0 +1,25 @@
+<%= form_for(@caf) do |f| %>
+  <% if @caf.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@caf.errors.count, "error") %> prohibited this caf from being saved:</h2>
+
+      <ul>
+      <% @caf.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :usuario %><br>
+    <%= f.text_field :usuario %>
+  </div>
+  <div class="field">
+    <%= f.label :senha %><br>
+    <%= f.text_field :senha %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

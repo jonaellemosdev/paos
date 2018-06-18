@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cafs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Usuario</th>
+      <th>Senha</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cafs.each do |caf| %>
+      <tr>
+        <td><%= caf.usuario %></td>
+        <td><%= caf.senha %></td>
+        <td><%= link_to 'Show', caf %></td>
+        <td><%= link_to 'Edit', edit_caf_path(caf) %></td>
+        <td><%= link_to 'Destroy', caf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Caf', new_caf_path %>
